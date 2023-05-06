@@ -1,30 +1,32 @@
-import { ExpoConfig } from "@expo/config";
+import 'dotenv/config';
 
 export default {
   expo: {
-    name: "native-todo",
-    slug: "native-todo",
-    version: "1.0.0",
-    orientation: "portrait",
-    icon: "./assets/icon.png",
-    userInterfaceStyle: "light",
+    name: 'todos-app',
+    slug: 'todos-app',
+    version: '1.0.0',
+    orientation: 'portrait',
+    icon: './assets/icon.png',
     splash: {
-      image: "./assets/splash.png",
-      resizeMode: "contain",
-      backgroundColor: "#ffffff",
+      image: './assets/splash.png',
+      resizeMode: 'contain',
+      backgroundColor: '#ffffff',
     },
-    assetBundlePatterns: ["**/*"],
+    updates: {
+      fallbackToCacheTimeout: 0,
+    },
+    assetBundlePatterns: ['**/*'],
     ios: {
       supportsTablet: true,
     },
     android: {
       adaptiveIcon: {
-        foregroundImage: "./assets/adaptive-icon.png",
-        backgroundColor: "#ffffff",
+        foregroundImage: './assets/adaptive-icon.png',
+        backgroundColor: '#FFFFFF',
       },
     },
     web: {
-      favicon: "./assets/favicon.png",
+      favicon: './assets/favicon.png',
     },
     extra: {
       apiKey: process.env.API_KEY,

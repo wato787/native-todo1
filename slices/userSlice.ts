@@ -1,17 +1,17 @@
-import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { User } from "../types/types";
-import type { RootState } from "../store";
+import { createSlice, PayloadAction } from '@reduxjs/toolkit';
+import { User } from '../types/types';
+import type { RootState } from '../store';
 
 type State = {
   user: User;
 };
 
 const initialState: State = {
-  user: { uid: "", email: "" },
+  user: { uid: '', email: '' },
 };
 
 export const userSlice = createSlice({
-  name: "user",
+  name: 'user',
   initialState,
   reducers: {
     login: (state, action: PayloadAction<User>) => {

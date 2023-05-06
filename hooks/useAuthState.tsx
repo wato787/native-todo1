@@ -1,8 +1,8 @@
-import { useEffect, useState } from "react";
-import { useSelector, useDispatch } from "react-redux";
-import { onAuthStateChanged } from "firebase/auth";
-import { auth } from "../firebaseConfig";
-import { selectUser, login, logout } from "../slices/userSlice";
+import { useEffect, useState } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { onAuthStateChanged } from 'firebase/auth';
+import { auth } from '../firebaseConfig';
+import { selectUser, login, logout } from '../slices/userSlice';
 
 export const useAuthState = () => {
   const user = useSelector(selectUser);
@@ -17,7 +17,7 @@ export const useAuthState = () => {
           login({
             uid: authUser.uid,
             email: authUser.email!,
-          })
+          }),
         );
       } else {
         dispatch(logout());
